@@ -6,7 +6,22 @@ function App() {
   const toggleModal = () => setShowModal(!showModal);
   const [bookmarks, setBookmarks] = useState(() => {
     const savedBookmarks = localStorage.getItem("bookmarks");
-    return savedBookmarks ? JSON.parse(savedBookmarks) : [];
+    return savedBookmarks
+      ? JSON.parse(savedBookmarks)
+      : [
+          {
+            title: "Vercel.com",
+            link: "https://vercel.com/bvedes-projects",
+          },
+          {
+            title: "Github",
+            link: "https://github.com",
+          },
+          {
+            title: "Tailwind",
+            link: "https://tailwindcss.com/docs/scroll-margin",
+          },
+        ];
   });
 
   useEffect(() => {
