@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Modal from "./components/Modal";
+import { IoCloseCircle } from "react-icons/io5";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -73,7 +74,7 @@ function App() {
                 className="text-white"
                 onClick={() => handleDelete(bookmark)}
               >
-                x
+                <IoCloseCircle className="bg-red-500 rounded-full" />
               </button>
             </div>
 
